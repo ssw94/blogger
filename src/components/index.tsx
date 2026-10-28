@@ -4,3 +4,4 @@ export { Input } from "./Input";
 export { Button } from "./Button";
 export { Heading } from "./Heading";
 export { SubHeading } from "./SubHeading";
+export { default as BlogEditor } from "./BlogEditor/BlogEditor";

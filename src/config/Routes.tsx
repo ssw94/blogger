@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layouts/RootLayout";
 import { Navigate } from "react-router-dom";
 import { authRoutes } from "../features/Authentication/routes";
+import { BlogEditor } from "../components";
 
 export const routes = createBrowserRouter([{
   path: "/",
@@ -10,7 +11,8 @@ export const routes = createBrowserRouter([{
     ...authRoutes,
     {
       index: true,
-      element: <Navigate to="/auth" replace/>,
+      element:<BlogEditor/>
+      //element: <Navigate to="/auth" replace/>,
     },
   ]
 }])

@@ -25,7 +25,7 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       currentTheme,
       toggleTheme,
     }}>
-    <Switch checked={currentTheme === 'dark'} onChange={toggleTheme} sx={{ position:'fixed', top: '1rem', right: '1rem',zIndex: zIndex.header }} />
+    {/*<Switch checked={currentTheme === 'dark'} onChange={toggleTheme} sx={{ position:'fixed', top: '1rem', right: '1rem',zIndex: zIndex.header }} />*/}
     <MuiThemeProvider theme={theme}>
     <Box className="size-full !p-0 !m-0">
       {children}

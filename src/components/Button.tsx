@@ -5,8 +5,6 @@ export const Button = styled(MuiButton)(({ theme }) => ({
   borderRadius: 14,
   textTransform: "none",
   fontWeight: 600,
-  padding: "12px 24px",
-  minHeight: 48,
   background: `linear-gradient(
       90deg,
       ${theme.palette.primary.main},

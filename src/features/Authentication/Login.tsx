@@ -23,9 +23,7 @@ const Login = () => {
       }}
     >
       <Card sx={{ width: 420, p: 5 }}>
-        <Heading align="center">
-          Welcome Back 👋
-        </Heading>
+        <Heading align="center">Welcome Back 👋</Heading>
 
         <SubHeading align="center" sx={{ mb: 4 }}>
           Sign in to your account
@@ -38,40 +36,33 @@ const Login = () => {
           }}
           onSubmit={(values) => console.log(values)}
         >
-          {({ handleSubmit }) => (
+          {({ handleSubmit, values, handleChange }) => (
             <Form onSubmit={handleSubmit}>
               <Stack spacing={3}>
                 <Input
                   name="email"
                   label="Email"
+                  value={values.email}
+                  onChange={handleChange}
                 />
 
                 <Input
                   name="password"
                   label="Password"
                   type="password"
+                  value={values.password}
+                  onChange={handleChange}
                 />
 
-                <Button
-                  type="submit"
-                  variant="contained"
-                  fullWidth
-                >
+                <Button type="submit" variant="contained" fullWidth>
                   Login
                 </Button>
 
-                <Typography
-                  variant="body2"
-                  align="center"
-                >
+                <Typography variant="body2" align="center">
                   Don't have an account?{" "}
-                  <Link to="/auth/register">
-                    Register
-                  </Link>
-                  <br/>
-                  <Link to="/auth/forgot-password">
-                    Forgot Password
-                  </Link>
+                  <Link to="/auth/register">Register</Link>
+                  <br />
+                  <Link to="/auth/forgot-password">Forgot Password</Link>
                 </Typography>
               </Stack>
             </Form>
